@@ -1,0 +1,54 @@
+<div class="container text-center ">
+
+  <div *ngIf="searchForm" [formGroup]="searchForm">
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Lost Ark</label>
+      <input type="text" formControlName="searchText" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp" placeholder="search">
+      <small id="emailHelp" class="form-text text-muted">search........</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="addNew()">Add</button>
+    <button type="submit" class="btn btn-primary" (click)="resetAccessoryId()">resetId</button>
+    <button type="submit" class="btn btn-primary" (click)="download()">Export</button>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 m-2" (matSortChange)="announceSortChange($event)">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <ng-container *ngFor="let col of propertyBindingColumns;let i = index;let last = last" [matColumnDef]="col">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ displayedColumns[i] }} </th>
+      <td mat-cell *matCellDef="let element"> 
+        <span *ngIf="col != 'actions'"> {{ element[col] }}  </span>
+        <div *ngIf="col == 'actions'">
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success" (click)="viewDetail(element)">Details</button>
+            <button type="button" class="btn btn-danger" (click)="remove(element)">Remove</button>
+          </div>
+
+
+        </div>
+          </td>
+
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="engraving1Val">
+      <th mat-header-cell *matHeaderCellDef> engraving1Val </th>
+      <td mat-cell *matCellDef="let element"> {{element.engraving1Val}} </td>
+    </ng-container> -->
+
+    <tr mat-header-row *matHeaderRowDef="propertyBindingColumns"></tr>
+    <tr mat-row   
+    *matRowDef="let row; columns: propertyBindingColumns;"></tr>
+  </table>
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+
+</div>
