@@ -30,7 +30,7 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
     'accessoryType',
     'accessoryTier',
     'ignName','actions'];
-  dataSource = new MatTableDataSource(this.inventories);
+  dataSource = new MatTableDataSource<InventoryModel>(this.inventories);
 
 
   @ViewChild(MatSort) sort?: MatSort;
@@ -58,7 +58,9 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
   }
   loadData(){
     this.inventorySrv.getData().subscribe(res => {
-      this.inventories = res as InventoryModel[];
+
+      let temp = JSON.parse(res.toString());
+      this.inventories = temp as InventoryModel[];
       console.log(this.inventories);
       this.refreshTable(true);
     })
@@ -67,7 +69,7 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
   refreshTable(fullRebind = false){
     this.dataSource = new MatTableDataSource(this.inventories);
 
-    if(fullRebind){
+    if(fullRebind && this.dataSource){
       if (this.sort) {
         this.dataSource.sort = this.sort;
       }
@@ -81,10 +83,28 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
   download() {
     let data = JSON.stringify(this.inventories);
 
-    const blob = new Blob([data], { type: 'text/json' });
-    const url = window.URL.createObjectURL(blob);
-    window.open(url);
+    // const blob = new Blob([data], { type: 'text/json' });
+    // const url = window.URL.createObjectURL(blob);
+    // window.open(url);
+
+    var data2, filename, link;
+
+    var csv = 'data:text/json;charset=utf-8,' + JSON.stringify(data);
+
+    var date = new Date();
+    filename = date.toString()+'.json';
+
+
+data2 = encodeURI(csv);
+
+    link = document.createElement('a');
+    link.setAttribute('href', data2);
+    link.setAttribute('download', filename);
+    link.click();
+
   }
+
+
 
   addNew() {
     let dialogRef = this.dialog.open(InventoryNewComponent, {
@@ -121,7 +141,7 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
 
   addAccessory(result: InventoryModel) {
     if (!result.id) {
-      result.id = this.inventories[this.inventories.length - 1].id + 1;
+      result.id = this.inventories.length!=0?this.inventories[this.inventories.length - 1].id + 1:1;
 
       this.inventories.push(result);
 
@@ -143,16 +163,24 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
     this.inventories.forEach(element => {
       element.id = id;
       id++;
+      if(element.engraving1Val < element.engraving2Val){
+        let temp:string  = element.engraving1??"";
+        let val:number = element.engraving1Val;
+        element.engraving1 = element.engraving2;
+        element.engraving1Val = element.engraving2Val;
+        element.engraving2 = temp;
+        element.engraving2Val=val;
+      }
     })
   }
 
 
 
   ngAfterViewInit() {
-    if (this.sort) {
+    if (this.sort && this.dataSource) {
       this.dataSource.sort = this.sort;
     }
-    if (this.paginator) {
+    if (this.paginator && this.dataSource) {
       this.dataSource.paginator = this.paginator;
     }
   }

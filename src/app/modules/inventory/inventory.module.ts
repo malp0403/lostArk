@@ -6,13 +6,15 @@ import { InventoryHomeComponent } from './components/inventory-home/inventory-ho
 import { InventoryTestComponent } from './components/inventory-test/inventory-test.component';
 import { SharedModule } from '../shared/shared.module';
 import { InventoryNewComponent } from './components/inventory-new/inventory-new.component';
+import { InventoryHighlightPipe } from './pipes/inventory-highlight.pipe';
 
 
 @NgModule({
   declarations: [
     InventoryHomeComponent,
     InventoryTestComponent,
-    InventoryNewComponent
+    InventoryNewComponent,
+    InventoryHighlightPipe
   ],
   imports: [
     CommonModule,

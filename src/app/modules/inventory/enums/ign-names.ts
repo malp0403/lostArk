@@ -1,3 +1,9 @@
 export enum IgnNamesEnum {
-    BigblackCoat='BigblackCoat'
+    BigblackCoat='BigblackCoat',
+    SpyForPie = 'SpyForPie',
+    Milanoj = 'Milanoj',
+    BeautifulPeople="BeautifulPeople",
+    BigblackCoke= 'BigblackCoke',
+    SpyForLatte='SpyForLatte',
+    SoRandom= 'SoRandom'
 }
