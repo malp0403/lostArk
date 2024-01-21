@@ -5,5 +5,8 @@ export enum IgnNamesEnum {
     BeautifulPeople="BeautifulPeople",
     BigblackCoke= 'BigblackCoke',
     SpyForLatte='SpyForLatte',
-    SoRandom= 'SoRandom'
+    SoRandom= 'SoRandom',
+    DotNetCode='DotNetCode',
+    SmartLink='SmartLink',
+    SpyForCheess='SpyForCheese'
 }
