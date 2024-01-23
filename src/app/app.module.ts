@@ -8,6 +8,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import {HttpClientModule} from '@angular/common/http';
+import { SharedModule } from './modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

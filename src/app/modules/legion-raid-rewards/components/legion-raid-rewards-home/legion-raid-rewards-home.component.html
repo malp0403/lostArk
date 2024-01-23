@@ -1,0 +1,593 @@
+<div class="container">
+<div class="row" >
+    <div [formGroup]="materialFg">
+        <div class="row d-flex flex-row ">
+            <div class="col-1 ">
+                <label for="Blue1" class="col-2 col-form-label ">Blue1</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Blue1" formControlName="Blue1">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="Blue2" class="col-2 col-form-label">Blue2</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Blue2" formControlName="Blue2">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="Blue3" class="col-2 col-form-label">Blue3</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Blue3" formControlName="Blue3">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="Red1" class="col-2 col-form-label">Red1</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Red1" formControlName="Red1">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="Red2" class="col-2 col-form-label">Red2</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Red2" formControlName="Red2">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="Red3" class="col-2 col-form-label">Red3</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="Red3" formControlName="Red3">
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex flex-row">
+            <div class="col-1 ">
+                <label for="GreatLeapstone" class="col-2 col-form-label ">Great</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="GreatLeapstone" formControlName="GreatLeapstone">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="MarvalLeapstone" class="col-2 col-form-label">Marval</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="MarvalLeapstone" formControlName="MarvalLeapstone">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="RadiantLeapstone" class="col-2 col-form-label">Radiant</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="RadiantLeapstone" formControlName="RadiantLeapstone">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="shardSmall" class="col-2 col-form-label">shardSmall</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="shardSmall" formControlName="ShardSmall">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="shardMedian" class="col-2 col-form-label">shardMedian</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="shardMedian" formControlName="ShardMedian">
+                </div>
+            </div>
+            <div class="col-1">
+                <label for="shdarLarge" class="col-2 col-form-label">Guardian1</label>
+                <div class="col-10">
+                    <input type="text" class="form-control" id="shdarLarge" formControlName="ShardLarge">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+    <div class="accordion" id="accordionExample">
+
+        <div class="d-flex m-2">
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingValtanGate1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseValtanGate1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseValtanGate1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Valtan Gate1 Box','Cost':450,Sum:legionRaidSummary.Valtan.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseValtanGate1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingValtanGate1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Valtan.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingValtanGate2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseValtanGate2" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseValtanGate2">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Valtan Gate1 Box','Cost':600,Sum:legionRaidSummary.Valtan.Gate2.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseValtanGate2" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingValtanGate2">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Valtan.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingVykasGate1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseVykasGate1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseVykasGate1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Vykas Gate1 Box','Cost':500,Sum:legionRaidSummary.Vykas.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseVykasGate1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingVykasGate1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Vykas.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingVykasGate2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseVykasGate2" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseVykasGate2">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Vykas Gate2 Box','Cost':650,Sum:legionRaidSummary.Vykas.Gate2.Sum}">
+                        </ng-container> </button>
+                </h2>
+                <div id="panelsStayOpen-collapseVykasGate2" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingVykasGate2">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Vykas.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex m-2">
+
+        </div>
+
+
+
+        <div class="d-flex m-2">
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseClownGate1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseClownGate1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate1 Box','Cost':800,Sum:legionRaidSummary.Clown.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseClownGate1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingClownGate1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Clown.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseClownGate2" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseClownGate2">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate2 Box','Cost':1000,Sum:legionRaidSummary.Clown.Gate2.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseClownGate2" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingClownGate2">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Clown.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-ClownGate3" aria-expanded="false"
+                        aria-controls="panelsStayOpen-ClownGate3">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate3 Box','Cost':1300,Sum:legionRaidSummary.Clown.Gate3.Sum}">
+                        </ng-container> </button>
+                </h2>
+                <div id="panelsStayOpen-ClownGate3" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-ClownGate3">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Brel.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="d-flex m-2">
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingBrel1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseBrel1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseBrel1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate1 Box','Cost':700,Sum:legionRaidSummary.Brel.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseBrel1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingBrel1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Brel.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseClownGate3" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseClownGate3">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate2 Box','Cost':900,Sum:legionRaidSummary.Brel.Gate2.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseClownGate3" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingClownGate3">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Clown.Gate3"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingBrel3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseBrel3" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseBrel3">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate3 Box','Cost':1100,Sum:legionRaidSummary.Brel.Gate3.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseBrel3" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingBrel3">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Brel.Gate3"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingBrel4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseBrel4" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseBrel4">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate4 Box','Cost':1800,Sum:legionRaidSummary.Brel.Gate4.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseBrel4" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingBrel4">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Brel.Gate4"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="d-flex m-2">
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingAkkanGate1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseAkkanGate1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseAkkanGate1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate1 Box','Cost':1200,Sum:legionRaidSummary.Akkan.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseAkkanGate1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingAkkanGate1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Akkan.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingAkkanGate2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseAkkanGate2" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseAkkanGate2">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate2 Box','Cost':1400,Sum:legionRaidSummary.Akkan.Gate2.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseAkkanGate2" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingAkkanGate2">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Akkan.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingAkkanGate3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseAkkanGate3" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseAkkanGate3">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate3 Box','Cost':1900,Sum:legionRaidSummary.Akkan.Gate3.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseAkkanGate3" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingAkkanGate3">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Akkan.Gate3"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="d-flex m-2">
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingKan1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseKan1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseKan1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate1 Box','Cost':700,Sum:legionRaidSummary.Kayangel.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseKan1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingKan1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Kayangel.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingKan2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseKan2" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseKan2">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate2 Box','Cost':900,Sum:legionRaidSummary.Kayangel.Gate2.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseKan2" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingKan2">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Kayangel.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item col-4">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingKan3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseKan3" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseKan3">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate3 Box','Cost':1100,Sum:legionRaidSummary.Kayangel.Gate3.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseKan3" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingKan3">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Kayangel.Gate3"></ng-container>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Tower -->
+        <div class="d-flex m-2">
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingTower1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTower1" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTower1">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate1 Box','Cost':1000,Sum:legionRaidSummary.Tower.Gate1.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTower1" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTower1">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Tower.Gate1"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingTower2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTower2" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTower2">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate2 Box','Cost':1000,Sum:legionRaidSummary.Tower.Gate2.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTower2" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTower2">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Tower.Gate2"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingTower3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTower3" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTower3">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate3 Box','Cost':1800,Sum:legionRaidSummary.Tower.Gate3.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTower3" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTower3">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Tower.Gate3"></ng-container>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item col-3">
+                <h2 class="accordion-header mb-0" id="panelsStayOpen-headingTower4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTower4" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTower4">
+                        <ng-container
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate3 Box','Cost':2500,Sum:legionRaidSummary.Tower.Gate4.Sum}">
+                        </ng-container>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTower4" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTower4">
+                    <div class="accordion-body">
+                        <ng-container
+                            *ngTemplateOutlet="AbyssRaidTable;context: legionRaidSummary.Tower.Gate4"></ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
+
+
+<ng-template #LegionRaidTable let-Blue="Blue" let-Red="Red" let-Shard="Shard" let-Leap="Leap" let-Sum="Sum"
+    let-BlueAmount="BlueAmount" let-RedAmount="RedAmount" let-ShardAmount="ShardAmount" let-LeapAmount="LeapAmount">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Blue</th>
+                <th scope="col">Red</th>
+                <th scope="col">Shard</th>
+                <th scope="col">Leap</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <th>{{ BlueAmount}} </th>
+                <td>{{ RedAmount}} </td>
+                <td>{{ ShardAmount}} </td>
+                <td>{{ LeapAmount}} </td>
+            </tr>
+            <tr>
+                <th>{{Blue}}g</th>
+                <td>{{Red}}g</td>
+                <td>{{Shard}}g</td>
+                <td>{{Leap}}g</td>
+                <td>{{Sum}}g</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
+
+<ng-template #AbyssRaidTable let-Blue="Blue" let-Red="Red" let-Shard="Shard" let-Leap="Leap" let-Sum="Sum"
+    let-BlueAmount="BlueAmount" let-RedAmount="RedAmount" let-ShardAmount="ShardAmount" let-LeapAmount="LeapAmount">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Shard</th>
+                <th scope="col">Leap</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>{{ ShardAmount}} </td>
+                <td>{{ LeapAmount}} </td>
+            </tr>
+            <tr>
+                <td>{{Shard}}g</td>
+                <td>{{Leap}}g</td>
+                <td>{{Sum}}g</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
+
+<ng-template #LegionRaidHeaderTable let-Sum="Sum" let-Cost="Cost" let-Title="Title">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">{{Title}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Cost</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>{{Cost}}g</td>
+                <td><span [ngClass]="Sum>=Cost?'text-success fw-bolder strong':''">{{Sum}}</span>g</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

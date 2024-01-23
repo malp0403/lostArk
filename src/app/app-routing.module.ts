@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'craft',
     loadChildren: () => import('./modules/craft/craft.module').then(m => m.CraftModule)
+  },
+  {
+    path: 'legionRaidRewards',
+    loadChildren: () => import('./modules/legion-raid-rewards/legion-raid-rewards.module').then(m => m.LegionRaidRewardsModule)
   }
 ];
 
