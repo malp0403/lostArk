@@ -1,85 +1,72 @@
 <div class="container">
-<div class="row" >
-    <div [formGroup]="materialFg">
-        <div class="row d-flex flex-row ">
-            <div class="col-1 ">
-                <label for="Blue1" class="col-2 col-form-label ">Blue1</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="Blue1" formControlName="Blue1">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="Blue2" class="col-2 col-form-label">Blue2</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="Blue2" formControlName="Blue2">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="Blue3" class="col-2 col-form-label">Blue3</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="Blue3" formControlName="Blue3">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="Red1" class="col-2 col-form-label">Red1</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="Red1" formControlName="Red1">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="Red2" class="col-2 col-form-label">Red2</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="Red2" formControlName="Red2">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="Red3" class="col-2 col-form-label">Red3</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="Red3" formControlName="Red3">
-                </div>
-            </div>
-        </div>
-        <div class="row d-flex flex-row">
-            <div class="col-1 ">
-                <label for="GreatLeapstone" class="col-2 col-form-label ">Great</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="GreatLeapstone" formControlName="GreatLeapstone">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="MarvalLeapstone" class="col-2 col-form-label">Marval</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="MarvalLeapstone" formControlName="MarvalLeapstone">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="RadiantLeapstone" class="col-2 col-form-label">Radiant</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="RadiantLeapstone" formControlName="RadiantLeapstone">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="shardSmall" class="col-2 col-form-label">shardSmall</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="shardSmall" formControlName="ShardSmall">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="shardMedian" class="col-2 col-form-label">shardMedian</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="shardMedian" formControlName="ShardMedian">
-                </div>
-            </div>
-            <div class="col-1">
-                <label for="shdarLarge" class="col-2 col-form-label">Guardian1</label>
-                <div class="col-10">
-                    <input type="text" class="form-control" id="shdarLarge" formControlName="ShardLarge">
-                </div>
-            </div>
+    <div class="row m-2">
+        <div [formGroup]="materialFg">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/blue1.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/blue2.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/blue3.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/red1.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/red2.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/red3.png" class="img-fluid"
+                                alt="..."></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="text" class="form-control" id="Blue1" formControlName="Blue1">
+                        </td>
+                        <td> <input type="text" class="form-control" id="Blue2" formControlName="Blue2">
+                        </td>
+                        <td> <input type="text" class="form-control" id="Blue3" formControlName="Blue3">
+                        </td>
+                        <td> <input type="text" class="form-control" id="Red1" formControlName="Red1">
+                        </td>
+                        <td> <input type="text" class="form-control" id="Red2" formControlName="Red2">
+                        </td>
+                        <td> <input type="text" class="form-control" id="Red3" formControlName="Red3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/greatLeap.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/marvelLeap.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/radiantLeap.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/shardS.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/shardM.png" class="img-fluid"
+                                alt="..."></th>
+                        <th scope="col" class="col-1"> <img src="../../../../../assets/img/shardL.png" class="img-fluid"
+                                alt="..."></th>
+                    </tr>
+                    <tr>
+                        <td> <input type="text" class="form-control" id="GreatLeapstone" formControlName="GreatLeapstone">
+                        </td>
+                        <td> <input type="text" class="form-control" id="MarvalLeapstone" formControlName="MarvalLeapstone">
+                        </td>
+                        <td> <input type="text" class="form-control" id="RadiantLeapstone" formControlName="RadiantLeapstone">
+                        </td>
+                        <td> <input type="text" class="form-control" id="ShardSmall" formControlName="ShardSmall">
+                        </td>
+                        <td> <input type="text" class="form-control" id="ShardMedian" formControlName="ShardMedian">
+                        </td>
+                        <td> <input type="text" class="form-control" id="ShardLarge" formControlName="ShardLarge">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
-</div>
- 
+
 
     <div class="accordion" id="accordionExample">
 
@@ -90,7 +77,7 @@
                         data-bs-target="#panelsStayOpen-collapseValtanGate1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseValtanGate1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Valtan Gate1 Box','Cost':450,Sum:legionRaidSummary.Valtan.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Valtan Gate1','Cost':450,Sum:legionRaidSummary.Valtan.Gate1.Sum,'RaidType':1}">
                         </ng-container>
                     </button>
                 </h2>
@@ -109,7 +96,7 @@
                         data-bs-target="#panelsStayOpen-collapseValtanGate2" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseValtanGate2">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Valtan Gate1 Box','Cost':600,Sum:legionRaidSummary.Valtan.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Valtan Gate2','Cost':600,Sum:legionRaidSummary.Valtan.Gate2.Sum,'RaidType':1}">
                         </ng-container>
                     </button>
                 </h2>
@@ -129,7 +116,7 @@
                         data-bs-target="#panelsStayOpen-collapseVykasGate1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseVykasGate1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Vykas Gate1 Box','Cost':500,Sum:legionRaidSummary.Vykas.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Vykas Gate1','Cost':500,Sum:legionRaidSummary.Vykas.Gate1.Sum,'RaidType':2}">
                         </ng-container>
                     </button>
                 </h2>
@@ -148,7 +135,7 @@
                         data-bs-target="#panelsStayOpen-collapseVykasGate2" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseVykasGate2">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Vykas Gate2 Box','Cost':650,Sum:legionRaidSummary.Vykas.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Vykas Gate2','Cost':650,Sum:legionRaidSummary.Vykas.Gate2.Sum,'RaidType':2}">
                         </ng-container> </button>
                 </h2>
                 <div id="panelsStayOpen-collapseVykasGate2" class="accordion-collapse collapse"
@@ -169,13 +156,13 @@
 
         <div class="d-flex m-2">
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate1">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseClownGate1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseClownGate1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate1 Box','Cost':800,Sum:legionRaidSummary.Clown.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate1','Cost':800,Sum:legionRaidSummary.Clown.Gate1.Sum,'RaidType':3}">
                         </ng-container>
                     </button>
                 </h2>
@@ -188,13 +175,13 @@
                 </div>
             </div>
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseClownGate2" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseClownGate2">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate2 Box','Cost':1000,Sum:legionRaidSummary.Clown.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate2','Cost':1000,Sum:legionRaidSummary.Clown.Gate2.Sum,'RaidType':3}">
                         </ng-container>
                     </button>
                 </h2>
@@ -208,13 +195,13 @@
             </div>
 
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingClownGate3">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-ClownGate3" aria-expanded="false"
                         aria-controls="panelsStayOpen-ClownGate3">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate3 Box','Cost':1300,Sum:legionRaidSummary.Clown.Gate3.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Clown Gate3','Cost':1300,Sum:legionRaidSummary.Clown.Gate3.Sum,'RaidType':3}">
                         </ng-container> </button>
                 </h2>
                 <div id="panelsStayOpen-ClownGate3" class="accordion-collapse collapse"
@@ -235,7 +222,7 @@
                         data-bs-target="#panelsStayOpen-collapseBrel1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseBrel1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate1 Box','Cost':700,Sum:legionRaidSummary.Brel.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate1','Cost':700,Sum:legionRaidSummary.Brel.Gate1.Sum,'RaidType':4}">
                         </ng-container>
                     </button>
                 </h2>
@@ -255,7 +242,7 @@
                         data-bs-target="#panelsStayOpen-collapseClownGate3" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseClownGate3">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate2 Box','Cost':900,Sum:legionRaidSummary.Brel.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate2','Cost':900,Sum:legionRaidSummary.Brel.Gate2.Sum,'RaidType':4}">
                         </ng-container>
                     </button>
                 </h2>
@@ -263,7 +250,7 @@
                     aria-labelledby="panelsStayOpen-headingClownGate3">
                     <div class="accordion-body">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Clown.Gate3"></ng-container>
+                            *ngTemplateOutlet="LegionRaidTable;context: legionRaidSummary.Brel.Gate3"></ng-container>
                     </div>
                 </div>
             </div>
@@ -275,7 +262,7 @@
                         data-bs-target="#panelsStayOpen-collapseBrel3" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseBrel3">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate3 Box','Cost':1100,Sum:legionRaidSummary.Brel.Gate3.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate3','Cost':1100,Sum:legionRaidSummary.Brel.Gate3.Sum,'RaidType':4}">
                         </ng-container>
                     </button>
                 </h2>
@@ -294,7 +281,7 @@
                         data-bs-target="#panelsStayOpen-collapseBrel4" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseBrel4">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate4 Box','Cost':1800,Sum:legionRaidSummary.Brel.Gate4.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Brel Gate4 Box','Cost':1800,Sum:legionRaidSummary.Brel.Gate4.Sum,'RaidType':4}">
                         </ng-container>
                     </button>
                 </h2>
@@ -310,13 +297,13 @@
         </div>
 
         <div class="d-flex m-2">
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingAkkanGate1">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseAkkanGate1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseAkkanGate1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate1 Box','Cost':1200,Sum:legionRaidSummary.Akkan.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate1','Cost':1200,Sum:legionRaidSummary.Akkan.Gate1.Sum,'RaidType':5}">
                         </ng-container>
                     </button>
                 </h2>
@@ -329,13 +316,13 @@
                 </div>
             </div>
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingAkkanGate2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseAkkanGate2" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseAkkanGate2">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate2 Box','Cost':1400,Sum:legionRaidSummary.Akkan.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate2','Cost':1400,Sum:legionRaidSummary.Akkan.Gate2.Sum,'RaidType':5}">
                         </ng-container>
                     </button>
                 </h2>
@@ -348,13 +335,13 @@
                 </div>
             </div>
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingAkkanGate3">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseAkkanGate3" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseAkkanGate3">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate3 Box','Cost':1900,Sum:legionRaidSummary.Akkan.Gate3.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Akkan Gate3','Cost':1900,Sum:legionRaidSummary.Akkan.Gate3.Sum,'RaidType':5}">
                         </ng-container>
                     </button>
                 </h2>
@@ -371,13 +358,13 @@
         </div>
 
         <div class="d-flex m-2">
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingKan1">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseKan1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseKan1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate1 Box','Cost':700,Sum:legionRaidSummary.Kayangel.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate1','Cost':700,Sum:legionRaidSummary.Kayangel.Gate1.Sum,'RaidType':6}">
                         </ng-container>
                     </button>
                 </h2>
@@ -390,13 +377,13 @@
                 </div>
             </div>
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingKan2">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseKan2" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseKan2">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate2 Box','Cost':900,Sum:legionRaidSummary.Kayangel.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate2','Cost':900,Sum:legionRaidSummary.Kayangel.Gate2.Sum,'RaidType':6}">
                         </ng-container>
                     </button>
                 </h2>
@@ -409,13 +396,13 @@
                 </div>
             </div>
 
-            <div class="accordion-item col-4">
+            <div class="accordion-item col-3">
                 <h2 class="accordion-header mb-0" id="panelsStayOpen-headingKan3">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#panelsStayOpen-collapseKan3" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseKan3">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate3 Box','Cost':1100,Sum:legionRaidSummary.Kayangel.Gate3.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Kayangel Gate3','Cost':1100,Sum:legionRaidSummary.Kayangel.Gate3.Sum,'RaidType':6}">
                         </ng-container>
                     </button>
                 </h2>
@@ -439,7 +426,8 @@
                         data-bs-target="#panelsStayOpen-collapseTower1" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTower1">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate1 Box','Cost':1000,Sum:legionRaidSummary.Tower.Gate1.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: 
+                            {'Title':'Tower Gate1','Cost':1000,'ImgSrc':'../../../../../assets/img/valtan.jpeg',Sum:legionRaidSummary.Tower.Gate1.Sum,'RaidType':7}">
                         </ng-container>
                     </button>
                 </h2>
@@ -457,7 +445,7 @@
                         data-bs-target="#panelsStayOpen-collapseTower2" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTower2">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate2 Box','Cost':1000,Sum:legionRaidSummary.Tower.Gate2.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate2','Cost':1000,Sum:legionRaidSummary.Tower.Gate2.Sum,'RaidType':7}">
                         </ng-container>
                     </button>
                 </h2>
@@ -475,7 +463,7 @@
                         data-bs-target="#panelsStayOpen-collapseTower3" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTower3">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate3 Box','Cost':1800,Sum:legionRaidSummary.Tower.Gate3.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate3','Cost':1800,Sum:legionRaidSummary.Tower.Gate3.Sum,'RaidType':7}">
                         </ng-container>
                     </button>
                 </h2>
@@ -493,7 +481,7 @@
                         data-bs-target="#panelsStayOpen-collapseTower4" aria-expanded="false"
                         aria-controls="panelsStayOpen-collapseTower4">
                         <ng-container
-                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate3 Box','Cost':2500,Sum:legionRaidSummary.Tower.Gate4.Sum}">
+                            *ngTemplateOutlet="LegionRaidHeaderTable;context: {'Title':'Tower Gate4','Cost':2500,Sum:legionRaidSummary.Tower.Gate4.Sum,'RaidType':7}">
                         </ng-container>
                     </button>
                 </h2>
@@ -533,13 +521,13 @@
             <tr>
                 <th>{{ BlueAmount}} </th>
                 <td>{{ RedAmount}} </td>
-                <td>{{ ShardAmount}} </td>
+                <td>{{ ShardAmount | number}} </td>
                 <td>{{ LeapAmount}} </td>
             </tr>
             <tr>
                 <th>{{Blue}}g</th>
                 <td>{{Red}}g</td>
-                <td>{{Shard}}g</td>
+                <td>{{Shard | number}}g</td>
                 <td>{{Leap}}g</td>
                 <td>{{Sum}}g</td>
             </tr>
@@ -564,7 +552,7 @@
                 <td>{{ LeapAmount}} </td>
             </tr>
             <tr>
-                <td>{{Shard}}g</td>
+                <td>{{Shard |number}}g</td>
                 <td>{{Leap}}g</td>
                 <td>{{Sum}}g</td>
             </tr>
@@ -572,18 +560,31 @@
     </table>
 </ng-template>
 
-<ng-template #LegionRaidHeaderTable let-Sum="Sum" let-Cost="Cost" let-Title="Title">
-    <table class="table">
+<ng-template #LegionRaidHeaderTable let-Sum="Sum" let-Cost="Cost" let-Title="Title" let-RaidType="RaidType">
+    <div class="row d-flex pb-4">
+        <div>
+            {{Title}}
+
+        </div>
+        <div [ngSwitch]="RaidType">
+            <img *ngSwitchCase="1" src="../../../../../assets/img/valtan.jpeg" class="img-fluid" alt="...">
+            <img *ngSwitchCase="2" src="../../../../../assets/img/vykas.jpeg" class="img-fluid" alt="...">
+            <img *ngSwitchCase="3" src="../../../../../assets/img/clown.jpeg" class="img-fluid" alt="...">
+            <img *ngSwitchCase="4" src="../../../../../assets/img/brel.jpg" class="img-fluid" alt="...">
+            <img *ngSwitchCase="5" src="../../../../../assets/img/akkan.jpg" class="img-fluid" alt="...">
+            <img *ngSwitchCase="6" src="../../../../../assets/img/kayangel.jpg" class="img-fluid" alt="...">
+            <img *ngSwitchCase="7" src="../../../../../assets/img/tower.jpeg" class="img-fluid" alt="...">
+        </div>
+    </div>
+    <table class="table mb-0">
         <thead>
-            <tr>
-                <th scope="col">{{Title}}</th>
-            </tr>
-        </thead>
-        <tbody>
             <tr>
                 <th>Cost</th>
                 <th>Value</th>
+
             </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td>{{Cost}}g</td>
                 <td><span [ngClass]="Sum>=Cost?'text-success fw-bolder strong':''">{{Sum}}</span>g</td>

@@ -29,13 +29,13 @@ export class LegionRaidRewardsHomeComponent implements OnInit{
       Blue3:this.fb.control(5),
       Red1:this.fb.control(1),
       Red2:this.fb.control(5),
-      Red3:this.fb.control(33),
-      GreatLeapstone:this.fb.control(12),
-      MarvalLeapstone:this.fb.control(25),
+      Red3:this.fb.control(31),
+      GreatLeapstone:this.fb.control(11),
+      MarvalLeapstone:this.fb.control(24),
       RadiantLeapstone:this.fb.control(132),
-      ShardSmall:this.fb.control(150),
-      ShardMedian:this.fb.control(300),
-      ShardLarge:this.fb.control(450),
+      ShardSmall:this.fb.control(240),
+      ShardMedian:this.fb.control(275),
+      ShardLarge:this.fb.control(420),
     })
    
   }
@@ -225,15 +225,15 @@ export class LegionRaidRewardsHomeComponent implements OnInit{
         Sum: 0
       },
       Gate4:{
-        Blue:60 * Blue2,
-        Red:30*Red2,
-        Shard:1300*this.bestShardPotion,
-        Leap:12*MarvalLeapstone,
+        Blue:200 * Blue2,
+        Red:100*Red2,
+        Shard:10000*this.bestShardPotion,
+        Leap:40*MarvalLeapstone,
 
-        BlueAmount:900,
-        RedAmount:540,
-        ShardAmount:1600,
-        LeapAmount:12,
+        BlueAmount:2000,
+        RedAmount:1000,
+        ShardAmount:10000,
+        LeapAmount:40,
         Sum: 0
       }
     };
