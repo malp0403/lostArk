@@ -21,5 +21,10 @@ export enum EngravingEnum {
     HitMaster="HitMaster",
     SightFocus="SightFocus",
     MasterTenacity="MasterTenacity",
+    Awakening="Awakening",
+    DropOfEther="DropOfEther",
+    Expert="Expert",
+    VitalPointHit="VitalPointHit",
+    MpEfficiency="MpEfficiency",
     Others="Others"
 }

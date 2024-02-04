@@ -8,5 +8,8 @@ export enum IgnNamesEnum {
     SoRandom= 'SoRandom',
     DotNetCode='DotNetCode',
     SmartLink='SmartLink',
-    SpyForCheess='SpyForCheese'
+    SpyForCheess='SpyForCheese',
+    Pearlruby='Pearlruby',
+    SpyForCandy='SpyForCandy',
+    SpyForCoffee='SpyForCoffee'
 }

@@ -189,39 +189,39 @@ export class LegionRaidRewardsHomeComponent implements OnInit{
 
     let Brel={
       Gate1:{
-        Blue:60 * Blue2,
-        Red:30*Red2,
-        Shard:1300*this.bestShardPotion,
+        Blue:52 * Blue2,
+        Red:26*Red2,
+        Shard:3000*this.bestShardPotion,
         Leap:12*MarvalLeapstone,
 
-        BlueAmount:900,
-        RedAmount:540,
-        ShardAmount:1600,
+        BlueAmount:520,
+        RedAmount:260,
+        ShardAmount:3000,
         LeapAmount:12,
         Sum: 0
       },
       Gate2:{
-        Blue:60 * Blue2,
-        Red:30*Red2,
-        Shard:1300*this.bestShardPotion,
-        Leap:12*MarvalLeapstone,
+        Blue:84 * Blue2,
+        Red:42*Red2,
+        Shard:4000*this.bestShardPotion,
+        Leap:16*MarvalLeapstone,
 
-        BlueAmount:900,
-        RedAmount:540,
-        ShardAmount:1600,
-        LeapAmount:12,
+        BlueAmount:840,
+        RedAmount:420,
+        ShardAmount:4000,
+        LeapAmount:16,
         Sum: 0
       },
       Gate3:{
-        Blue:60 * Blue2,
-        Red:30*Red2,
-        Shard:1300*this.bestShardPotion,
-        Leap:12*MarvalLeapstone,
+        Blue:128 * Blue2,
+        Red:64*Red2,
+        Shard:5200*this.bestShardPotion,
+        Leap:24*MarvalLeapstone,
 
-        BlueAmount:900,
-        RedAmount:540,
-        ShardAmount:1600,
-        LeapAmount:12,
+        BlueAmount:1280,
+        RedAmount:640,
+        ShardAmount:5200,
+        LeapAmount:24,
         Sum: 0
       },
       Gate4:{
@@ -286,100 +286,100 @@ export class LegionRaidRewardsHomeComponent implements OnInit{
 
     let Kayangel={
       Gate1:{
-        Blue:0,
-        Red:0,
+        Blue:14*Blue3,
+        Red:7*Red3,
         Shard:1500*this.bestShardPotion,
         Leap:3*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
+        BlueAmount:140,
+        RedAmount:70,
         ShardAmount:1500,
         LeapAmount:3,
         Sum: 0
       },
       Gate2:{
-        Blue:0,
-        Red:0,
+        Blue:18*Blue3,
+        Red:9*Red3,
         Shard:2000*this.bestShardPotion,
         Leap:4*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
+        BlueAmount:180,
+        RedAmount:90,
         ShardAmount:2000,
         LeapAmount:4,
         Sum: 0
       },
       Gate3:{
-        Blue:0,
-        Red:0,
+        Blue:24*Blue3,
+        Red:12*Red3,
         Shard:2500*this.bestShardPotion,
         Leap:6*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
+        BlueAmount:240,
+        RedAmount:120,
         ShardAmount:2500,
         LeapAmount:6,
         Sum: 0
       }
     };
-    Kayangel.Gate1.Sum =  Kayangel.Gate1.Shard+Kayangel.Gate1.Leap;
-    Kayangel.Gate2.Sum = Kayangel.Gate2.Shard+Kayangel.Gate2.Leap;
-    Kayangel.Gate3.Sum =  Kayangel.Gate3.Shard+Kayangel.Gate3.Leap;
+    Kayangel.Gate1.Sum =  Kayangel.Gate1.Shard+Kayangel.Gate1.Leap + Kayangel.Gate1.Blue+Kayangel.Gate1.Red;
+    Kayangel.Gate2.Sum = Kayangel.Gate2.Shard+Kayangel.Gate2.Leap  + Kayangel.Gate2.Blue+Kayangel.Gate2.Red;
+    Kayangel.Gate3.Sum =  Kayangel.Gate3.Shard+Kayangel.Gate3.Leap + + Kayangel.Gate3.Blue+Kayangel.Gate3.Red;
 
     let Tower={
       Gate1:{
-        Blue:0,
-        Red:0,
-        Shard:13500*this.bestShardPotion,
+        Blue:30*Blue3,
+        Red:15*Red3,
+        Shard:4000*this.bestShardPotion,
         Leap:3*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
-        ShardAmount:2500,
-        LeapAmount:6,
+        BlueAmount:300,
+        RedAmount:150,
+        ShardAmount:4000,
+        LeapAmount:3,
         Sum: 0
       },
       Gate2:{
-        Blue:0,
-        Red:0,
-        Shard:2000*this.bestShardPotion,
-        Leap:4*RadiantLeapstone,
+        Blue:30*Blue3,
+        Red:15*Red3,
+        Shard:4000*this.bestShardPotion,
+        Leap:3*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
-        ShardAmount:2500,
-        LeapAmount:6,
+        BlueAmount:300,
+        RedAmount:150,
+        ShardAmount:4000,
+        LeapAmount:3,
         Sum: 0
       },
       Gate3:{
-        Blue:0,
-        Red:0,
-        Shard:2500*this.bestShardPotion,
-        Leap:6*RadiantLeapstone,
+        Blue:48*Blue3,
+        Red:24*Red3,
+        Shard:5000*this.bestShardPotion,
+        Leap:5*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
-        ShardAmount:2500,
-        LeapAmount:6,
+        BlueAmount:480,
+        RedAmount:240,
+        ShardAmount:5000,
+        LeapAmount:5,
         Sum: 0
       },
       Gate4:{
-        Blue:0,
-        Red:0,
-        Shard:2500*this.bestShardPotion,
-        Leap:6*RadiantLeapstone,
+        Blue:60*Blue3,
+        Red:30*Red3,
+        Shard:5500*this.bestShardPotion,
+        Leap:7*RadiantLeapstone,
 
-        BlueAmount:0,
-        RedAmount:0,
-        ShardAmount:2500,
-        LeapAmount:6,
+        BlueAmount:600,
+        RedAmount:300,
+        ShardAmount:5500,
+        LeapAmount:7,
         Sum: 0
       }
     };
-    Tower.Gate1.Sum =  Tower.Gate1.Shard+Tower.Gate1.Leap;
-    Tower.Gate2.Sum = Tower.Gate2.Shard+Tower.Gate2.Leap;
-    Tower.Gate3.Sum =  Tower.Gate3.Shard+Tower.Gate3.Leap;
-    Tower.Gate4.Sum =  Tower.Gate4.Shard+Tower.Gate4.Leap;
+    Tower.Gate1.Sum =  Tower.Gate1.Shard+Tower.Gate1.Leap + Tower.Gate1.Blue + Tower.Gate1.Red;
+    Tower.Gate2.Sum = Tower.Gate2.Shard+Tower.Gate2.Leap + Tower.Gate2.Blue + Tower.Gate2.Red;
+    Tower.Gate3.Sum =  Tower.Gate3.Shard+Tower.Gate3.Leap + Tower.Gate3.Blue + Tower.Gate3.Red;
+    Tower.Gate4.Sum =  Tower.Gate4.Shard+Tower.Gate4.Leap + Tower.Gate4.Blue + Tower.Gate4.Red;
 
     this.legionRaidSummary={
       Valtan:Valtan,
