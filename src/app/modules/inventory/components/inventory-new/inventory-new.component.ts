@@ -52,7 +52,7 @@ export class InventoryNewComponent implements OnInit, OnDestroy {
       accessoryTier:this.fb.control(AccessoryTierEnum.Ancient.toString()),
       stats1:this.fb.control(StatsEnum.Swift.toString()),
       stats2:this.fb.control(null),
-      ignName:this.fb.control(IgnNamesEnum.BigblackCoat.toString())
+      ignName:this.fb.control(IgnNamesEnum.SoRandom.toString())
     })
     if(this.data && this.data.accessory){
       this.accessoryForm.patchValue({...this.data.accessory});

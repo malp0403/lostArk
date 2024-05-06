@@ -26,5 +26,6 @@ export enum EngravingEnum {
     Expert="Expert",
     VitalPointHit="VitalPointHit",
     MpEfficiency="MpEfficiency",
+    MasterBrawler="MasterBrawler",
     Others="Others"
 }
