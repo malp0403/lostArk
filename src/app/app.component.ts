@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'lostArk';
 
   constructor(private router:Router){
-    this.router.navigateByUrl('/inventory');
+    //this.router.navigateByUrl('/inventory');
   }
 }

@@ -7,6 +7,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { InventoryNewComponent } from '../inventory-new/inventory-new.component';
+import { CommonService } from 'src/app/services/common.service';
+import { MarketMaterialPrice } from 'src/app/models/market-material-price-model';
 
 @Component({
   selector: 'app-inventory-home',
@@ -16,6 +18,7 @@ import { InventoryNewComponent } from '../inventory-new/inventory-new.component'
 export class InventoryHomeComponent implements OnInit, AfterViewInit {
   searchForm?: FormGroup;
   inventories: InventoryModel[] = [];
+  MarketMaterialPrice:MarketMaterialPrice = new MarketMaterialPrice();
 
   displayedColumns: string[] = ['ID', 'Engraving1', 'Value', 'Engraving2', 'Value',
     'negative', 'Value',
@@ -37,7 +40,7 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator?: MatPaginator;
 
 
-  constructor(private fb: FormBuilder, private inventorySrv: InventoryService, public dialog: MatDialog) {
+  constructor(private fb: FormBuilder, private inventorySrv: InventoryService, public dialog: MatDialog,private commonSrv:CommonService) {
 
   }
   ngOnInit(): void {
@@ -57,7 +60,7 @@ export class InventoryHomeComponent implements OnInit, AfterViewInit {
 
   }
   loadData(){
-    this.inventorySrv.getData().subscribe(res => {
+    this.commonSrv.getInventoryData().subscribe(res => {
 
       let temp = JSON.parse(res.toString());
       this.inventories = temp as InventoryModel[];

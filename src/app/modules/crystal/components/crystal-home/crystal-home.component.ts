@@ -23,10 +23,10 @@ export class CrystalHomeComponent implements OnInit{
   ngOnInit(): void {
 
     this.form=  new FormGroup({
-      gold:this.fb.control(2500),
+      gold:this.fb.control(3000),
       targetGold:this.fb.control(100000),
-      royalCrystal:this.fb.control(null),
-      blueCrylstal:this.fb.control(null),
+      royalCrystal:this.fb.control(500),
+      blueCrylstal:this.fb.control(500),
       blueCrylstalGOld:this.fb.control(null)
     })
 
@@ -128,6 +128,13 @@ export class CrystalHomeComponent implements OnInit{
   formChanges(){
     this.form?.get('gold')?.valueChanges.subscribe(res=>{
       this.calculateGoldPerDollar();
+
+      this.updateRoyalCrystalGold();
+      this.CdRef.detectChanges();
+    })
+
+    this.form?.get('royalCrystal')?.valueChanges.subscribe(res=>{
+      this.updateRoyalCrystalGold();
       this.CdRef.detectChanges();
     })
 
@@ -141,6 +148,12 @@ export class CrystalHomeComponent implements OnInit{
 
   updateTargetGold(){
     this.CdRef.detectChanges();
+  }
+  RoyalCrystalGold:number =0;
+
+  updateRoyalCrystalGold(){
+    let royalCrystalAmount = this.form?.get('royalCrystal')?.value;
+    this.RoyalCrystalGold = (royalCrystalAmount /this.standardRcPerDollar) *this.goldPerDollar;
   }
 
 }

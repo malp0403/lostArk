@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MarketMaterialPrice } from 'src/app/models/market-material-price-model';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'legion-raid-rewards-home',
@@ -11,33 +13,62 @@ export class LegionRaidRewardsHomeComponent implements OnInit{
   legionRaidFg:FormGroup = new FormGroup({});
   bestShardPotion:number = 0;
   legionRaidSummary:any={};
-  constructor(public fb:FormBuilder,public cdRef:ChangeDetectorRef){
+  marketMaterialPrice?:MarketMaterialPrice = new MarketMaterialPrice();
+  constructor(public fb:FormBuilder,public cdRef:ChangeDetectorRef,private commonSrv:CommonService){
 
   }
 
   ngOnInit(): void {
     this.initMaterialForm();
+    this.loadFormData();
     this.updateBestShardPotions();
     this.updateLegionRaidSummary();
     this.onMaterialValueChanges();
     this.cdRef.detectChanges();
+
+    this.commonSrv.getMarketMaterialPrice().subscribe(res=>{
+      this.marketMaterialPrice = res;
+      this.loadFormData();
+      this.updateBestShardPotions();
+      this.updateLegionRaidSummary();
+      this.onMaterialValueChanges();
+      this.cdRef.detectChanges();
+    })
+
   }
   initMaterialForm(){
     this.materialFg= this.fb.group({
-      Blue1:this.fb.control(1),
-      Blue2:this.fb.control(1),
-      Blue3:this.fb.control(5),
-      Red1:this.fb.control(1),
-      Red2:this.fb.control(5),
-      Red3:this.fb.control(31),
-      GreatLeapstone:this.fb.control(11),
-      MarvalLeapstone:this.fb.control(24),
-      RadiantLeapstone:this.fb.control(132),
-      ShardSmall:this.fb.control(240),
-      ShardMedian:this.fb.control(275),
-      ShardLarge:this.fb.control(420),
+      Blue1:this.fb.control(this.marketMaterialPrice?.Blue1),
+      Blue2:this.fb.control(this.marketMaterialPrice?.Blue2),
+      Blue3:this.fb.control(this.marketMaterialPrice?.Blue3),
+      Red1:this.fb.control(this.marketMaterialPrice?.Red1),
+      Red2:this.fb.control(this.marketMaterialPrice?.Red2),
+      Red3:this.fb.control(this.marketMaterialPrice?.Red3),
+      GreatLeapstone:this.fb.control(this.marketMaterialPrice?.GreatHonorLeapstone),
+      MarvalLeapstone:this.fb.control(this.marketMaterialPrice?.MarvelousHonorLeapstone),
+      RadiantLeapstone:this.fb.control(this.marketMaterialPrice?.RadiantHonorLeapstone),
+      ShardSmall:this.fb.control(this.marketMaterialPrice?.Sshard),
+      ShardMedian:this.fb.control(this.marketMaterialPrice?.Mshard),
+      ShardLarge:this.fb.control(this.marketMaterialPrice?.Lshard),
     })
    
+  }
+
+  loadFormData(){
+    this.materialFg.patchValue({
+      Blue1:this.marketMaterialPrice?.Blue1,
+      Blue2:this.marketMaterialPrice?.Blue2,
+      Blue3:(this.marketMaterialPrice?.Blue3),
+      Red1:this.marketMaterialPrice?.Red1,
+      Red2:this.marketMaterialPrice?.Red2,
+      Red3:this.marketMaterialPrice?.Red3,
+      GreatLeapstone:this.marketMaterialPrice?.GreatHonorLeapstone,
+      MarvalLeapstone:this.marketMaterialPrice?.MarvelousHonorLeapstone,
+      RadiantLeapstone:this.marketMaterialPrice?.RadiantHonorLeapstone,
+      ShardSmall:this.marketMaterialPrice?.Sshard,
+      ShardMedian:this.marketMaterialPrice?.Mshard,
+      ShardLarge:this.marketMaterialPrice?.Lshard,
+    })
   }
 
   onMaterialValueChanges(){

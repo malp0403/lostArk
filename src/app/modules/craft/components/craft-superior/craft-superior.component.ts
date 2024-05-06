@@ -1,5 +1,7 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { MarketMaterialPrice } from 'src/app/models/market-material-price-model';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-craft-superior',
@@ -11,9 +13,9 @@ export class CraftSuperiorComponent {
   form?: FormGroup;
   craftPer:number=0;
   markerPer:number=0;
+  marketMaterialPrice?:MarketMaterialPrice;
 
-  constructor(public fb: FormBuilder) {
-
+  constructor(public fb: FormBuilder,private commonSrv:CommonService) {
   }
 
 
@@ -25,10 +27,18 @@ export class CraftSuperiorComponent {
       marketAmount: this.fb.control(1),
       items: this.fb.array([])
     })
-    this.addItem("Oreha Solar Carp",16,22,10);
-    this.addItem("Natural Pearl",64,4,10);
-    this.addItem("Fish",128,127,100);
+    this.loadMarketMaterialData();
+  }
 
+  loadMarketMaterialData(){
+    this.commonSrv.getMarketMaterialPrice().subscribe(res=>{
+      this.marketMaterialPrice = res;
+      this.addItem("Oreha Solar Carp",16,this.marketMaterialPrice?.OrehaSolarCarp,10);
+      this.addItem("Natural Pearl",64,this.marketMaterialPrice?.NaturalPearl,10);
+      this.addItem("Fish",128,this.marketMaterialPrice?.Fish,100);
+      //
+      this.calculate();
+    })
   }
 
   get itemCtrls() {
